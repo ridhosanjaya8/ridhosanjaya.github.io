@@ -3,83 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ridho Sanjaya Putra</title>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: #f4f6f9;
-        color: #222;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3f5f8;
+    color:#222;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:30px 15px;
+}
+
+/* HEADER */
+
+.header-card{
+    background:#fff;
+    border-radius:14px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    margin-bottom:20px;
+}
+
+.header-card h1{
+    font-size:48px;
+    margin-bottom:8px;
+}
+
+.header-card p{
+    color:#999;
+    font-size:18px;
+}
+
+/* TOP SECTION */
+
+.top-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.doc-card{
+    background:white;
+    border-radius:12px;
+    padding:18px;
+    min-height:130px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.doc-card h2{
+    font-size:18px;
+    font-weight:normal;
+}
+
+/* SECTION TAB */
+
+.section-title{
+    display:inline-block;
+    background:white;
+    padding:14px 20px;
+    border-radius:12px 12px 0 0;
+    font-size:18px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+/* LIST */
+
+.list-card{
+    background:white;
+    border-radius:12px;
+    padding:24px;
+    margin-bottom:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.list-card span{
+    font-size:18px;
+    font-weight:500;
+    margin-right:20px;
+}
+
+/* BUTTON */
+
+.btn{
+    background:#12b8f5;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:5px;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:16px;
+    transition:.2s;
+    white-space:nowrap;
+}
+
+.btn:hover{
+    background:#009ad3;
+}
+
+.btn-red{
+    background:#e74c3c;
+}
+
+.btn-red:hover{
+    background:#cf3829;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    z-index:9999;
+}
+
+.modal-content{
+    width:95%;
+    max-width:1200px;
+    height:92vh;
+    background:white;
+    margin:2vh auto;
+    border-radius:12px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+}
+
+.toolbar{
+    padding:12px;
+    background:#f2f2f2;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.toolbar a,
+.toolbar button{
+    border:none;
+}
+
+#pdfFrame{
+    width:100%;
+    flex:1;
+    border:none;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .header-card h1{
+        font-size:32px;
     }
 
-    .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
+    .header-card p{
+        font-size:15px;
     }
 
-    .card {
-        background: white;
-        padding: 20px;
-        margin-bottom: 15px;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    .top-grid{
+        grid-template-columns:1fr;
     }
 
-    .header {
-        text-align: center;
-        padding: 30px 10px;
+    .list-card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
     }
 
-    h1 {
-        margin-bottom: 5px;
+    .list-card span{
+        margin-right:0;
+        font-size:16px;
     }
 
-    .role {
-        color: gray;
-        margin-top: 0;
+    .btn{
+        width:100%;
+        text-align:center;
     }
 
-    a.button {
-        display: inline-block;
-        padding: 10px 15px;
-        background: #1f6feb;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        margin-top: 10px;
+    .toolbar{
+        flex-direction:column;
     }
 
-    a.button:hover {
-        background: #0f5bd3;
-    }
+}
 
-    ul {
-        padding-left: 18px;
-    }
-
-    li {
-        margin-bottom: 12px;
-        line-height: 1.4em;
-    }
-
-    a {
-        color: #1f6feb;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-        .container {
-            padding: 10px;
-        }
-    }
 </style>
-
 </head>
 
 <body>
@@ -87,86 +219,154 @@
 <div class="container">
 
     <!-- HEADER -->
-    <div class="card header">
+
+    <div class="header-card">
         <h1>Ridho Sanjaya Putra</h1>
-        <p class="role">Personal Data & Document Portal</p>
+        <p>Personal Data & Document Portal</p>
     </div>
 
-    <!-- CV -->
-    <div class="card">
-       <h2>Curriculum Vitae</h2>
+    <!-- CV & BIODATA -->
 
-<div style="border:1px solid #ddd; border-radius:10px; overflow:hidden; margin-bottom:10px;">
-    <iframe 
-        src="cv/CV RIDHO SANJAYA PUTRA 2026JD2.pdf"
-        width="100%" 
-        height="500px"
-        style="border:none;">
-    </iframe>
-</div>
+    <div class="top-grid">
 
-<a class="button" href="cv/CV RIDHO SANJAYA PUTRA 2026JD2.pdf" target="_blank">
-    Download CV
-</a>
+        <div class="doc-card">
+            <h2>Curriculum Vitae</h2>
+
+            <button
+            class="btn"
+            onclick="openPDF('cv/CV RIDHO SANJAYA PUTRA 2026JD2.pdf')">
+            Lihat / Unduh
+            </button>
+        </div>
+
+        <div class="doc-card">
+            <h2>Biodata</h2>
+
+            <button
+            class="btn"
+            disabled
+            style="opacity:.6;">
+            Segera Hadir
+            </button>
+        </div>
+
     </div>
 
     <!-- SERTIFIKAT -->
-<div class="card">
-    <h2>Sertifikat</h2>
 
-    <!-- SERTIFIKAT 1 -->
-    <h3>BNSP KKNI Level II Teknik Komputer dan Jaringan</h3>
+    <div class="section-title">
+        Sertifikat
+    </div>
 
-    <iframe 
-        src="sertifikat/BNSP.pdf"
-        width="100%" 
-        height="400px"
-        style="border:1px solid #ddd; border-radius:10px;">
-    </iframe>
+    <div style="height:8px;"></div>
 
-    <br>
+    <div class="list-card">
+        <span>BNSP KKNI LEVEL II : TEKNIK KOMPUTER DAN JARINGAN - 2018</span>
 
-    <a class="button" href="sertifikat/BNSP.pdf" target="_blank">
-        Download
-    </a>
+        <button
+        class="btn"
+        onclick="openPDF('sertifikat/BNSP.pdf')">
+        Lihat / Unduh
+        </button>
+    </div>
 
-    <hr>
+    <div class="list-card">
+        <span>SERTIFIKAT PKL PT TELKOM - 2018</span>
 
-    <!-- SERTIFIKAT 2 -->
-    <h3>Sertifikat PKL PT Telkom - 2018</h3>
+        <button
+        class="btn"
+        onclick="openPDF('sertifikat/S_PKL_Telkom_RidhoSanjayaPutra2018.pdf')">
+        Lihat / Unduh
+        </button>
+    </div>
 
-    <iframe 
-        src="sertifikat/S_PKL_Telkom_RidhoSanjayaPutra2018.pdf"
-        width="100%" 
-        height="400px"
-        style="border:1px solid #ddd; border-radius:10px;">
-    </iframe>
+    <div class="list-card">
+        <span>INSTRUKTUR PKW DESAIN GRAFIS - 2020</span>
 
-    <br>
-
-    <a class="button" href="sertifikat/S_PKL_Telkom_RidhoSanjayaPutra2018.pdf" target="_blank">
-        Download
-    </a>
-
-    <hr>
-
-    <!-- SERTIFIKAT 3 -->
-    <h3>Instruktur PKW Desain Grafis - 2020</h3>
-
-    <iframe 
-        src="sertifikat/SPKW ARCIKO.pdf"
-        width="100%" 
-        height="400px"
-        style="border:1px solid #ddd; border-radius:10px;">
-    </iframe>
-
-    <br>
-
-    <a class="button" href="sertifikat/SPKW ARCIKO.pdf" target="_blank">
-        Download
-    </a>
+        <button
+        class="btn"
+        onclick="openPDF('sertifikat/SPKW ARCIKO.pdf')">
+        Lihat / Unduh
+        </button>
+    </div>
 
 </div>
+
+<!-- MODAL PDF -->
+
+<div id="pdfModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="toolbar">
+
+            <a
+            id="downloadBtn"
+            class="btn"
+            download>
+            Unduh PDF
+            </a>
+
+            <a
+            id="newTabBtn"
+            class="btn"
+            target="_blank">
+            Buka di Tab Baru
+            </a>
+
+            <button
+            class="btn btn-red"
+            onclick="closePDF()">
+            Tutup
+            </button>
+
+        </div>
+
+        <iframe id="pdfFrame"></iframe>
+
+    </div>
+
+</div>
+
+<script>
+
+function openPDF(file){
+
+    document.getElementById("pdfModal").style.display = "block";
+
+    document.getElementById("pdfFrame").src = file;
+
+    document.getElementById("downloadBtn").href = file;
+
+    document.getElementById("newTabBtn").href = file;
+}
+
+function closePDF(){
+
+    document.getElementById("pdfModal").style.display = "none";
+
+    document.getElementById("pdfFrame").src = "";
+}
+
+window.onclick = function(event){
+
+    const modal = document.getElementById("pdfModal");
+
+    if(event.target === modal){
+        closePDF();
+    }
+
+}
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "Escape"){
+        closePDF();
+    }
+
+});
+
+</script>
 
 </body>
 </html>
