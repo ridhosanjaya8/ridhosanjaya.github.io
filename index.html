@@ -1,48 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Ridho Sanjaya Putra</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ridho Sanjaya Putra</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f9;
+        color: #222;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        margin-bottom: 15px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .header {
+        text-align: center;
+        padding: 30px 10px;
+    }
+
+    h1 {
+        margin-bottom: 5px;
+    }
+
+    .role {
+        color: gray;
+        margin-top: 0;
+    }
+
+    a.button {
+        display: inline-block;
+        padding: 10px 15px;
+        background: #1f6feb;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    a.button:hover {
+        background: #0f5bd3;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+
+    li {
+        margin-bottom: 12px;
+        line-height: 1.4em;
+    }
+
+    a {
+        color: #1f6feb;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            padding: 10px;
+        }
+    }
+</style>
+
 </head>
 
 <body>
 
-    <h1>Ridho Sanjaya Putra</h1>
+<div class="container">
 
-    <p>
-        Graphic Designer | Multimedia | Administrative Support
-    </p>
+    <!-- HEADER -->
+    <div class="card header">
+        <h1>Ridho Sanjaya Putra</h1>
+        <p class="role">Graphic Designer | Multimedia | Administrative Support</p>
+    </div>
 
-    <hr>
+    <!-- CV -->
+    <div class="card">
+        <h2>Curriculum Vitae</h2>
 
-    <h2>Curriculum Vitae</h2>
+        <a class="button" href="cv/CV RIDHO SANJAYA PUTRA 2026JD2.pdf" target="_blank">
+            Lihat / Download CV
+        </a>
+    </div>
 
-    <a href="cv/CV RIDHO SANJAYA PUTRA 2026JD2.pdf" target="_blank">
-        Lihat / Download CV
-    </a>
+    <!-- SERTIFIKAT -->
+    <div class="card">
+        <h2>Sertifikat</h2>
 
-    <hr>
+        <ul>
+            <li>
+                <a href="sertifikat/BNSP.pdf" target="_blank">
+                    BNSP KKNI Level II Teknik Komputer dan Jaringan
+                </a>
+            </li>
 
-    <h2>Sertifikat</h2>
+            <li>
+                <a href="sertifikat/S_PKL_Telkom_RidhoSanjayaPutra2018.pdf" target="_blank">
+                    Sertifikat PKL PT Telkom - 2018
+                </a>
+            </li>
 
-    <ul>
-        <li>
-            <a href="sertifikat/BNSP.pdf" target="_blank">
-                Sertifikat BNSP KKNI Level II Teknik Komputer dan Jaringan
-            </a>
-        </li>
+            <li>
+                <a href="sertifikat/SPKW ARCIKO.pdf" target="_blank">
+                    Instruktur PKW Desain Grafis - 2020
+                </a>
+            </li>
+        </ul>
+    </div>
 
-        <li>
-            <a href="sertifikat/S_PKL_Telkom_RidhoSanjayaPutra2018.pdf" target="_blank">
-                Sertifikat PKL PT Telkom - 2018
-            </a>
-        </li>
-
-        <li>
-            <a href="sertifikat/SPKW ARCIKO.pdf" target="_blank">
-                Sertifikat Instruktur PKW Desain Grafis - 2020
-            </a>
-        </li>
-    </ul>
+</div>
 
 </body>
 </html>
